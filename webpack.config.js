@@ -11,7 +11,19 @@ module.exports = {
   },
   output: {
     filename: "[name].bundle.js",
-    path: __dirname + "/dist",
+    path: __dirname + "/dist"
+  },
+  module: {
+    rules: [
+      {
+        test: /\.jpg$/i,
+        use: [
+          {
+            loader: 'file-loader'
+          }
+        ]
+      }
+    ]
   },
   plugins: [
     new webpack.ProvidePlugin({

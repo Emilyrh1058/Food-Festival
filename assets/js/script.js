@@ -18,7 +18,7 @@ $(document).ready(function() {
       img: img2,
       btnText: "Purchase Tickets",
       btnUrl: "tickets.html"
-    },
+    }
   ];
   
   carouselSlides.forEach((slide, i) => {
