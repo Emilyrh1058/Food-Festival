@@ -3,7 +3,7 @@ const webpack = require("webpack");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const WebpackPwaManifest = require("webpack-pwa-manifest");
 
-module.exports = {
+const config = {
   entry: {
     app: "./assets/js/script.js",
     events: "./assets/js/events.js",
@@ -59,9 +59,11 @@ module.exports = {
         src: path.resolve("assets/img/icons/icon-512x512.png"),
         sizes: [96, 128, 192, 256, 384, 512],
         destination: path.join("assets", "icons")
-    }]
+      }]
     })
 
   ],
   mode: 'development'     // https://webpack.js.org/configuration/mode/
 };
+
+module.exports = config;
